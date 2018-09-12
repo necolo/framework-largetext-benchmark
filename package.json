@@ -1,0 +1,11 @@
+{
+  "name": "framework-largetext-benchmark",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "repository": "https://github.com/Necolo/framework-largetext-benchmark.git",
+  "author": "Necolo Lv.C",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.0.3"
+  }
+}
