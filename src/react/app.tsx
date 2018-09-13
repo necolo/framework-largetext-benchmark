@@ -24,7 +24,6 @@ export class App extends React.Component<Props, State> {
     }
 
     public render () {
-        console.log('react rendered');
         const { contents } = this.props.handler;
         return (<div> React Test
             { contents.map((content, i) => <p key={i}>

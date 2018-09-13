@@ -66,13 +66,13 @@ export class Handler {
 
         const end = () => {
             clearInterval(t);
-            const projs = Object.keys(this.timers);
-            let result = '';
-            for (let j = 0; j < projs.length; j ++) {
-                const proj = projs[j];
-                result += `${proj}:${this.timers[proj].join(',\t')}ms\n`;
-            }
-            statusEl.innerText = result;
+            // const projs = Object.keys(this.timers);
+            // let result = '';
+            // for (let j = 0; j < projs.length; j ++) {
+            //     const proj = projs[j];
+            //     result += `${proj}:${this.timers[proj].join(',\t')}ms\n`;
+            // }
+            statusEl.innerText = 'done!';
         }
 
         (window as any).stop = end;

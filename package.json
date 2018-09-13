@@ -5,7 +5,11 @@
   "repository": "https://github.com/Necolo/framework-largetext-benchmark.git",
   "scripts": {
     "build": "tsc",
-    "start": "budo src/index.ts:bundle.js --dir ./ --serve bundle.js --open --live -- --debug -p [ tsify --project tsconfig.json ]"
+    "start-vue": "tsc && cp src/vue/*.vue build/vue && budo build/vue/index.js --dir ./ --serve bundle.js --open --live -- -t vueify",
+    "start-react": "budo src/react/index.tsx:bundle.js --dir ./ --serve bundle.js --open --live -- --debug -p [ tsify --project tsconfig.json ]"
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
   },
   "author": "Necolo Lv.C",
   "license": "MIT",
@@ -14,13 +18,16 @@
     "preact": "^8.3.1",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-property-decorator": "^7.0.0"
   },
   "devDependencies": {
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
-    "tsify": "^4.0.0",
+    "browserify": "^16.2.2",
     "budo": "^11.3.2",
-    "typescript": "^3.0.3"
+    "tsify": "^4.0.0",
+    "typescript": "^3.0.3",
+    "vueify": "^9.4.1"
   }
 }

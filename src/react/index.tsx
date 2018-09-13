@@ -3,8 +3,13 @@ import * as ReactDOM from 'react-dom';
 import { Handler } from '../handlers/handler';
 import { App } from './app';
 import { EventBus } from '../handlers/event';
+import { Consoler } from '../handlers/consoler';
 
-export = function (handler:Handler) {
+const handler = new Handler();
+const consoler = new Consoler(handler);
+consoler.addButton('react', testReact);
+
+function testReact () {
     const root = document.createElement('div');
     const testBoard = document.querySelector('#test');
     if (!testBoard) { return; }
