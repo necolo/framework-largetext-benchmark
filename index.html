@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <title>LargeText Test</title>
+  </head>
+  <body>
+    <div id="console">
+      <span>最大文字数</span>
+      <input id="maxContentLength" type="number" value="10000" />
+
+      <span>最小文字数</span>
+      <input id="minContentLength" type="number" value="10000" />
+
+      <span>篇幅数</span>
+      <input id="textCount" type="number" value="20" />
+
+      <button id="testReact">test react</button>
+      <button id="testVue">test vue</button>
+    </div>
+    <div id="result"><span id="status"></span></div>
+    <hr />
+    <div id="test"></div>
+    <script src="/bundle.js"></script>
+  </body>
+</html>

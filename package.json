@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "build/index.js",
   "repository": "https://github.com/Necolo/framework-largetext-benchmark.git",
+  "scripts": {
+    "build": "tsc",
+    "start": "budo src/index.ts:bundle.js --dir ./ --serve bundle.js --open --live -- --debug -p [ tsify --project tsconfig.json ]"
+  },
   "author": "Necolo Lv.C",
   "license": "MIT",
   "dependencies": {
@@ -15,6 +19,8 @@
   "devDependencies": {
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
+    "tsify": "^4.0.0",
+    "budo": "^11.3.2",
     "typescript": "^3.0.3"
   }
 }
